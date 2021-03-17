@@ -10,10 +10,10 @@ import DriverApp from './DriverApp.js';
 
 //import flagPinkImg from './assets/flag-pink.png';
 
-const token = 'MKYMO5VUWLWDAC1OZE0V1EAUVEKBKBE6';
+const token = '';
 const flow_id = 484014719;
 
-//const GOOGLE_MAPS_APIKEY = 'AIzaSyAvB2OCDGIxauZ2KbnWqcsrKOkM76_-ixg';
+//const GOOGLE_MAPS_APIKEY = '';
 
 //export default DriverApp;
 
