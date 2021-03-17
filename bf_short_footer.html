@@ -1,0 +1,135 @@
+</script>
+
+    </td></tr>
+</table>
+
+<table>
+<tr><td colspan="9" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+    <!--<tr><td colspan="10"><b>Your data</b></td></tr>
+    <tr><td colspan="6" style="height: 15px;"></td></tr>
+    -->
+    <tr>
+	<td><b>Enter data</b></td>
+        <td>Gender</td>
+        <td id="td_in_mr_data_weight_header">Weight, kg</td>
+        <td style="width: 125px;" id="td_in_mr_data_height_header">Height, cm</td>
+        <td>Age</td>
+        <td>Exercise intensity</td>
+        <td>Body type</td>
+    </tr>
+    
+    <tr><td></td>
+    <td><select onchange="mr_data_change('in_mr_data_gender')" id="in_mr_data_gender" style="background-color: #f1f1f1; font-size: 16px; height: 40px; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99;">
+        <option value="" disabled selected hidden>Gender</option>
+        <option value="1">Woman</option>
+        <option value="0">Man</option>
+    </select></td>
+    <td><input id="in_mr_data_weight" type="text" placeholder="Weight"></td>
+    <td id="td_in_mr_data_height">
+        <input id="in_mr_data_height" type="text" placeholder="Height">
+    </td>
+    <td><input id="in_mr_data_age" type="text" placeholder="Age"></td>
+    <td><select onchange="mr_data_change('in_mr_data_exercise')" id="in_mr_data_exercise" style="background-color: #f1f1f1; font-size: 16px; height: 40px; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99;">
+        <option value="" disabled selected hidden>Exercise</option>
+        <option value="0">Sedentary: little or no exercise</option>
+        <option value="1">Exercise 1-3 times/week</option>
+        <option value="2">Exercise 4-5 times/week</option>
+        <option value="3">Daily exercise or intense exercise 3-4 times/week</option>
+        <option value="4">Intense exercise 6-7 times/week</option>
+        <option value="5">Very intense exercise daily, or physical job</option>
+        </select></td>
+    <td><select onchange="mr_data_change('in_mr_data_body_type')" id="in_mr_data_body_type" style="background-color: #f1f1f1; font-size: 16px; height: 40px; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99;">
+        <option value="" disabled selected hidden>Body type</option>
+        <option value="0">Essential</option>
+        <option value="1">Athletes</option>
+        <option value="2">Fitnes</option>
+        <option value="3">Average</option>
+        <option value="4">Overweight</option>
+    </select></td>
+	<td><input onclick="document.getElementById('metabolic_rate').style.display=(document.getElementById('metabolic_rate').style.display=='none')?'block':'none'" type="submit" value="Show/hide details &darr;"></td>
+    </tr>
+
+<!--    <tr><td colspan="6" style="height: 15px;"></td></tr>
+
+    <tr><td colspan="10" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+    <tr><td colspan="10"><b>Your metabolic rate</b></td></tr>
+    <tr><td colspan="10" style="height: 15px;"></td></tr>
+    -->
+
+    <tr><td style="display: none;" id="metabolic_rate" colspan="9"></td>
+    </tr>
+
+    <tr><td colspan="9" style="height: 15px;"></td></tr>
+    </table>    
+    <p></p>
+    <center>We appreciate your questions and feedback, please drop us a line <a href="mailto:askme@balanced-foods.com">askme@balanced-foods.com</a></center>
+    
+    <center>
+    <p>&COPY; <a class="black-a" href="/">Balanced-Foods</a> 2020</p>
+    </center>
+    
+    </div>
+
+<div id="tutorial1" style="display: none; position: fixed; left: 100px; top: 70px; bottom:70px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1;">
+    <p></p>
+    
+        <center>Welcome to Balanced-Foods! :-)</center>
+        <p></p>
+        
+        <p>Let's start building balanced and tasty daily meal plan for you. Now these are our next steps:</p>
+        
+        <p></p>
+        
+        <p>1. Enter your goal. For now we have only two simple options for the goal: <b>be healthy and maintain weight</b> and <b>be healthy and lose the desired amount of weight</b>. What do we mean by be healthy is to have a balanced menu in terms of 39 most important vitamins, minerals and nutrients for your body. You'll see the list of those nutrients and upper and lower bounds of consumption for each in the next steps. We use average numbers for bounds. If you know more about your specific needs in nutrients from your doctor or from other sources then please feel free to edit those upper and lower bounds. You can do it right from the start or anytime. The default goal is <b>be healthy and maintain weight</b>. If you're OK with that then you can skip this step</p>
+        
+        <p></p>
+        
+        <p>2. Enter details about your gender, age, weight, height, exercise intensity, body type. Why do we need those details? We need them to determine your metabolic rate and protein needs. Which will help us understand how much calories and protein you need to consume to reach your goal. We have default prefilled details for the average person. You can also skip this step - this is OK for the starter just to see how system works. You'll be able to return to it and to change your details anytime</p>
+        
+        <p></p>
+        
+        <p>3. Enter your daily menu. That is the step then you don't want to skip because otherwise we don't know what you ate and how to balance your nutrition :-) You can just start from this step and enter your food in the section <b>Add food</b> at the box <b>New food</b></p>
+        <p><img src="/food_pics?file=tutorial-add-food.png"></p>
+            
+            <p></p>
+            
+            <center><input onclick="document.getElementById('tutorial1').style.display='none';" type="submit" value="Click here to start entering food and other details"></center>
+</div>
+
+
+<div id="tutorial2" style="position: fixed; left: 100px; top: 70px; bottom:30px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1; display: none;">
+    
+    <p></p>
+    
+    <center>You wonder what does those numbers mean near the food name in the suggestion list? Here is what</center>
+    
+    <p><table><tr><td><img src="/food_pics?file=tutorial-food-suggestion.png"></td><td>
+        <table style="font-size: 14px;">
+        <tr><td>1. Some nutriens - are protein, fat, carbs, fiber, calories, sodium. Protein, fat, carbs - are the nutrients that are responsible for the total amout of calories in food. Fiber is a very important nutrient e.g. it regulates our appetite. Sodium is responsible for water retention in your body which results in overweight if consumed too much</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>2. Food rank - is a number that shows you how this food alone is balanced with nutrients that your body needs according to their lower and upper limits. You can explore and/or change those lower and upper limits or add new nutrients or remove some nutrients in the <b>Set goal</b> section after pressing the button <b>Show/hide details</b>. The less this number - the better. The food in this list is sorted in the order from lower to hight. So anytime you start entering first letters of a food we quickly search the database of 400000 foods and show you the healthiest foods starting from the letters you typed.</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>3. The green leaf near the food means that this food is better to eat than not to eat to reach your goal. The meaning is that if you eat this food then this will improve the nutrition balance of your daily menu. The absence of the green leaf means that it's better not to eat this food, or if you choose to eat it then this will harm the nutrition balance of your daily menu. Don't worry, you still can eat food without green leafs as long as you have enough food with green leafs. Also don't worry green leafs does not mean something untasty or plastic. Look at the picture - Big Mac is green there :-)</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>4. If the food rank equals exactly 1 then this food is neutral in terms of balance. If it's less than 1 then the food is marked with a green leaf and if it's more than 1 then it's the food that's not marked with a green leaf</td></tr>
+        </table>
+        </td>
+        </tr></table>
+        </p>
+    
+    <p><p>
+    
+    <p></p>
+    
+    <center><input onclick="document.getElementById('tutorial2').style.display='none';" type="submit" value="Click here to continue entering food and other details"></center>
+    
+    </div>
+
+
+    </body>
+    </html>
+

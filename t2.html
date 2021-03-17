@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <script src="./static?file=bf.js">
+    </script>
+    <link rel="stylesheet" href="./static?file=bf.css"/>
+    
+
+    </head>
+<body onLoad="on_load()">
+    
+      
+<!--<input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
+
+    <div>
+        
+    <table>
+    
+    <tr><td colspan="4"><b>Your meal</b></td></tr>
+    <tr><td colspan="4" style="border-top: 1px solid #ddd; height: 15px;"></td></tr>
+    
+    <tr>
+    <td colspan="2"><input type="text" id="new_recipe" placeholder="Recipe name" style="width: 150px; height: 20px;"/></td>
+    <td><button onclick="save_recipe(document.getElementById('new_recipe').value);">Save</button></td>
+    </tr>
+    <tr><td colspan="4" style="height: 10px;"></td></tr>
+    
+    <tr>
+    
+<td>[<a href="/nutrition?food=171287" target="blank">171287</a>]</td>
+                    <td><input id="food171287" style="width: 50px; height: 20px;" type="text" value="120"> grams of </td>
+                    <td><a href="https://www.google.com/search?q=Egg, whole, raw, fresh" target="blank">Egg, whole, raw, fresh</a></td><td> Pro 12/15 Cal 143/171 </td>
+    <td>
+    
+    <!-- onChange="alert(event.target.value)" onInput="alert(event.target.value)" -->
+    
+    <div class="range-wrap">
+        <input class="range" type="range" min="1" max="100" value="50" id="myRange_171287" name="myRange_3300" list="rangedatalist_3300" />
+        <output class="bubble"></output>
+    </div>
+    <datalist id="rangedatalist_3300"><option value="50">3300</option></datalist>
+
+    
+    </td>
+    
+    </tr>
+
+        <script>
+        {
+            let input = document.getElementById("food171287");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22" + (amount === 0 ? "": ",%22171287%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+        <tr><td>
+        
+        [<a href="/nutrition?food=170335" target="blank">170335</a>]</td>
+                    <td><input id="food170335" style="width: 50px; height: 20px;" type="text" value="75"> grams of </td><td><a href="https://www.google.com/search?q=TACO BELL, BURRITO SUPREME with steak" target="blank">TACO BELL, BURRITO SUPREME with steak</a></td><td> Pro 9/6 Cal 183/137
+                        
+                        </td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("food170335");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22171287%22,%22120%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22" + (amount === 0 ? "": ",%22170335%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+        <tr><td>
+        [<a href="/nutrition?food=168746" target="blank">168746</a>] </td><td>
+                    <input id="food168746" style="width: 50px; height: 20px;" type="text" value="330"> grams of </td><td><a href="https://www.google.com/search?q=Alcoholic beverage, beer, regular, all" target="blank">Alcoholic beverage, beer, regular, all</a></td><td> Pro 0/1 Cal 43/141 </td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("food168746");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22" + (amount === 0 ? "": ",%22168746%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+        <tr><td>
+        [<a href="/nutrition?food=715540" target="blank">715540</a>]  </td><td>
+                    <input id="food715540" style="width: 50px; height: 20px;" type="text" value="200"> grams of </td><td><a href="https://www.google.com/search?q=ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND CARROTS IN A CREAMY ALFREDO SAUCE AND BREAD CRUMB TOPPING" target="blank">ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND CARROTS IN A CREAMY ALFRED</a></td><td> Pro 8/17 Cal 127/254 </td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("food715540");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22" + (amount === 0 ? "": ",%22715540%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+        <tr><td>
+        [<a href="/nutrition?food=173452" target="blank">173452</a>] </td><td>
+                    <input id="food173452" style="width: 50px; height: 20px;" type="text" value="1"> grams of </td><td><a href="https://www.google.com/search?q=Cheese, parmesan, dry grated, reduced fat" target="blank">Cheese, parmesan, dry grated, reduced fat</a></td><td> Pro 20/0 Cal 265/2 </td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("food173452");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173201%22,%22150%22,%22171077%22,%22396%22" + (amount === 0 ? "": ",%22173452%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+        
+        <tr><td>
+        [<a href="/nutrition?food=173201" target="blank">173201</a>] </td><td>
+                    <input id="food173201" style="width: 50px; height: 20px;" type="text" value="150"> grams of </td><td><a href="https://www.google.com/search?q=Alcoholic beverage, wine, table, white, Sauvignon Blanc" target="blank">Alcoholic beverage, wine, table, white, Sauvignon Blanc</a></td><td> Pro 0/0 Cal 81/121 </td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("food173201");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22171077%22,%22396%22" + (amount === 0 ? "": ",%22173201%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+        <tr><td>
+        [<a href="/nutrition?food=171077" target="blank">171077</a>] </td><td>
+                    <input id="food171077" style="width: 50px; height: 20px;" type="text" value="396"> grams of </td><td><a href="https://www.google.com/search?q=Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw" target="blank">Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw</a></td><td> Pro 22/89 Cal 120/475 </td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("food171077");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22" + (amount === 0 ? "": ",%22171077%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+        <tr><td colspan="4" style="height: 15px;"></td></tr>
+        <tr><td colspan="4">
+    <div class="autocomplete" style="width:1000px;">
+      <input id="myInputNewFood" type="text" placeholder="New food" autocomplete="off">
+    </div>
+    <script>
+        autocomplete("", 999999999,
+            "/balance?nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22&foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22,%22999999999%22,%22100%22", document.getElementById("myInputNewFood"), arr);
+    </script>
+    </td></tr>
+        
+        
+        
+        <tr><td colspan="4" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td colspan="4" style="height: 15px;"></td></tr>
+        
+        </table><table>
+        
+        <tr><td colspan="6">
+        <b>Your limits</b>
+        </td></tr>
+        <tr><td colspan="6" style="height: 15px;"></td></tr>
+        
+        <tr><td>
+[1008]</td><td> Energy </td><td> < </td><td>
+        <input id="nutrient1008" style="width: 75px; height: 20px;" type="text" value="1000"></td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("nutrient1008");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22" + (amount === 0 ? "": ",%221008%22,%22%3C%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+    <tr><td colspan="6"> <div class="autocomplete" style="width:300px;">
+      <input id="addBadNutrient" type="text" placeholder="Add bad nutrient" autocomplete="off">
+    </div>
+    <script>
+        autocomplete("nutrients", 777777777,
+            "/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22,%22777777777%22,%22%3C%22,%221000%22", document.getElementById("addBadNutrient"), arr);
+    </script>
+    </td></tr>
+    
+
+
+
+<tr><td> [1003]</td><td> Protein</td><td> > </td><td>
+        <input id="nutrient1003" style="width: 75px; height: 20px;" type="text" value="130"></td></tr>
+
+        <script>
+        {
+            let input = document.getElementById("nutrient1003");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                 let amount = Number(input.value);
+                 if (amount === Number.NaN)
+                    amount = 0;
+                 let url = "/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221008%22,%22%3C%22,%221000%22" + (amount === 0 ? "": ",%221003%22,%22%3E%22,%22"+amount+"%22");
+                console.log(amount, url);
+                window.location.href = url;
+              }
+            });
+        }
+        </script>
+        
+    <tr><td colspan="6"><div class="autocomplete" style="width:300px;">
+      <input id="addGoodNutrient" type="text" placeholder="Add good nutrient" autocomplete="off">
+    </div>
+    <script>
+        autocomplete("nutrients", 777777777,
+            "/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22,%22777777777%22,%22%3E%22,%221000%22", document.getElementById("addGoodNutrient"), arr);
+    </script>
+    </td></tr>
+    <tr><td colspan="6" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+    <tr><td colspan="6" style="height: 15px;"></td></tr>
+    
+  
+    
+<tr><td colspan="6">
+<b>Your consumption</b></td></tr>
+<tr><td colspan="6" style="height: 15px;"></td></tr>
+
+
+<tr><td>[1008]</td><td> Energy</td><td> < </td><td>1000</td><td>You'll consume: 1305</td><td><span style="color: red;"><b>(30 % more)</b></span></td></tr>
+
+
+
+<tr><td>[1003]</td><td> Protein</td><td> > </td><td>130</td><td>You'll consume: 131</td><td><span style="color: green;"><b>GOOD</b></span></td></tr>
+
+<tr><td colspan="6" style="height: 15px;"></td></tr>
+<tr><td colspan="6" style="border-top: 1px solid #ddd; height: 15px;"></td></tr>
+
+</table><table>
+
+<tr><td colspan="5"><div><b>Our recomendation</b></div></td></tr>
+<tr><td colspan="5" style="height: 15px;"></td></tr>
+
+
+<tr><td>[<a href="/nutrition?food=171287" target="blank">171287</a>]</td><td> 0 grams of </td><td><a href="https://www.google.com/search?q=Egg, whole, raw, fresh" target="blank">Egg, whole, raw, fresh</a></td><td><b> -120 grams </b></td><td>
+                <button onclick="window.location.href='/balance?foods=%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22'">Apply</button></td></tr>
+
+                <tr><td></td><td>or substitute with</td>
+
+                <td><div class="autocomplete" style="width:500px;">
+                  <input id="myInput171287" type="text" placeholder="Food" autocomplete="off">
+                </div></td></tr>
+
+                <script>
+                autocomplete('filters=%221003%22,%22%3E%22,%2213%22,%221008%22,%22%3C%22,%22143%22&sort=1008&limitsort=10',171287, '/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22', document.getElementById("myInput171287"), arr);
+                </script>
+                
+<tr><td>
+[<a href="/nutrition?food=170335" target="blank">170335</a>]</td><td> 0 grams of </td><td><a href="https://www.google.com/search?q=TACO BELL, BURRITO SUPREME with steak" target="blank">TACO BELL, BURRITO SUPREME with steak</a></td><td><b> -75 grams</b></td><td>
+                <button onclick="window.location.href='/balance?foods=%22171287%22,%22120%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22'">Apply</button></td></tr>
+
+                <tr><td></td><td>or substitute with
+
+                </td><td><div class="autocomplete" style="width:500px;">
+                  <input id="myInput170335" type="text" placeholder="Food" autocomplete="off">
+                </div></td></tr>
+
+                <script>
+                autocomplete('filters=%221003%22,%22%3E%22,%2210%22,%221008%22,%22%3C%22,%22183%22&sort=1008&limitsort=10',170335, '/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22', document.getElementById("myInput170335"), arr);
+                </script>
+                
+
+<tr><td>[<a href="/nutrition?food=168746" target="blank">168746</a>]</td><td> 330 grams of </td><td><a href="https://www.google.com/search?q=Alcoholic beverage, beer, regular, all" target="blank">Alcoholic beverage, beer, regular, all</a></td></tr>
+    
+<tr><td>[<a href="/nutrition?food=715540" target="blank">715540</a>]</td><td> 67 grams of </td><td><a href="https://www.google.com/search?q=ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND CARROTS IN A CREAMY ALFREDO SAUCE AND BREAD CRUMB TOPPING" target="blank">ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND C</a></td><td><b> -133 grams</b></td><td>
+                <button onclick="window.location.href='/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%2267%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22'">Apply</button></td></tr>
+
+                <tr><td></td><td>or substitute with
+
+                </td><td><div class="autocomplete" style="width:500px;">
+                  <input id="myInput715540" type="text" placeholder="Food" autocomplete="off">
+                </div></td></tr>
+
+                <script>
+                autocomplete('filters=%221003%22,%22%3E%22,%229%22,%221008%22,%22%3C%22,%22127%22&sort=1008&limitsort=10',715540, '/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22', document.getElementById("myInput715540"), arr);
+                </script>
+                
+
+<tr><td>[<a href="/nutrition?food=173452" target="blank">173452</a>]</td><td> 0 grams of </td><td><a href="https://www.google.com/search?q=Cheese, parmesan, dry grated, reduced fat" target="blank">Cheese, parmesan, dry grated, reduced fat</a></td><td><b> -1 grams</b></td><td>
+                <button onclick="window.location.href='/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22'">Apply</button></td></tr>
+
+                <tr><td></td><td>or substitute with
+
+                </td><td><div class="autocomplete" style="width:500px;">
+                  <input id="myInput173452" type="text" placeholder="Food" autocomplete="off">
+                </div></td></tr>
+
+                <script>
+                autocomplete('filters=%221003%22,%22%3E%22,%2220%22,%221008%22,%22%3C%22,%22265%22&sort=1008&limitsort=10',173452, '/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22396%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22', document.getElementById("myInput173452"), arr);
+                </script>
+                
+
+<tr><td>[<a href="/nutrition?food=173201" target="blank">173201</a>]</td><td> 150 grams of </td><td><a href="https://www.google.com/search?q=Alcoholic beverage, wine, table, white, Sauvignon Blanc" target="blank">Alcoholic beverage, wine, table, white, Sauvignon Blanc</a></td></tr>
+
+<tr><td>[<a href="/nutrition?food=171077" target="blank">171077</a>]</td><td> 544 grams of </td><td><a href="https://www.google.com/search?q=Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw" target="blank">Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw</a></td><td><b> +148 grams</b>
+                </td><td><button onclick="window.location.href='/balance?foods=%22171287%22,%22120%22,%22170335%22,%2275%22,%22168746%22,%22330%22,%22715540%22,%22200%22,%22173452%22,%221%22,%22173201%22,%22150%22,%22171077%22,%22544%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22'">Apply</button></td></tr>
+                
+
+
+        <tr><td colspan="5" style="height: 15px;"></td></tr>
+        <tr><td colspan="4"></td><td>
+        <button onclick="window.location.href='/balance?foods=%22168746%22,%22330%22,%22715540%22,%2267%22,%22173201%22,%22150%22,%22171077%22,%22544%22&nutrients=%221003%22,%22%3E%22,%22130%22,%221008%22,%22%3C%22,%221000%22'">Apply ALL</button>
+        </td></tr>
+
+<tr><td colspan="5" style="height: 15px;"></td></tr>
+<tr><td colspan="5" style="border-top: 1px solid #ddd; height: 15px;"></td></tr>
+
+</table><table>
+
+<tr><td colspan="3">
+<b>If you apply all then</b></td></tr>
+<tr><td colspan="4" style="height: 15px;"></td></tr>
+
+<tr><td><div>[1008] Energy < </td><td>1000</td><td>You'll consume: 1000</td><td><span style="color: green;"><b>GOOD</b></span></div></td></tr>
+
+<tr><td><div>[1003] Protein > </td><td>130</td><td>You'll consume: 130</td><td><span style="color: green;"><b>GOOD</b></span></div></td></tr>
+
+<tr><td colspan="4" style="height: 15px;"></td></tr>
+<tr><td colspan="4" style="border-top: 1px solid #ddd; height: 15px;"></td></tr>
+
+<tr><td colspan="4"><div style="color: green;"><b>Good like with your meal :-)</b></div></td></tr>
+
+    </table>
+    
+    </div>
+    
+    
+</body>
+</html>

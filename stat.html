@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179151347-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-179151347-1');
+            </script>
+
+<link rel="stylesheet" href="./static?file=bf.css">
+    
+    <script>
+
+        
+        function stat_autocomplete(inp)
+        {
+            //console.log(`autocomplete(1): suggest_url=${suggest_url}`);
+            
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function(e) {
+                   
+                // Combine the URL for the food_by_rank request
+                let url = `/suggest_food_from_stat?limitsort=100&inc=${inp.value}`;
+                    
+                console.log(`stat_autocomplete: url=${url}`);
+                    fetch(url)
+                     .then(response => response.json())
+                     .then(result => stat_autocomplete2(inp, result)
+                     );
+            });
+
+            inp.addEventListener("click", function(e) {
+                    
+                inp.placeholder = "Searching for the healthiest match ...";
+                    
+                // Combine the URL for the food_by_rank request
+                let url = `/suggest_food_from_stat?limitsort=100&inc=${inp.value}`;
+                
+                console.log(`stat_autocomplete: url=${url}`);
+
+                fetch(url)
+                        .then(response => response.json())
+                        .then(result => stat_autocomplete2(inp, result)
+                     );
+                    
+            });
+
+          
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function(e) {
+              let x = document.getElementById(/*this*/inp.id + "autocomplete-list");
+              if (x) x = x.getElementsByTagName("div");
+              if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+                increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+              } else if (e.keyCode == 38) { //up
+                /*If the arrow UP key is pressed,
+                decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+              } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                  /*and simulate a click on the "active" item:*/
+                  if (x) x[currentFocus].click();
+                }
+              }
+            });
+            
+            function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+            }
+            
+            function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (let i = 0; i < x.length; i++) {
+              x[i].classList.remove("autocomplete-active");
+            }
+            }
+
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+              stat_closeAllLists(inp, e.target);
+            });
+          
+        } // function stat_autocomplete(inp)
+    
+        function stat_closeAllLists(inp, elmnt) {
+          /*close all autocomplete lists in the document,
+          except the one passed as an argument:*/
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+            }
+          }
+        }
+    
+        function stat_autocomplete2(inp, result)
+        {
+            //console.log("result=", result);
+
+            let a, b, i, val = inp.value;
+            
+            //console.log('val=', val);
+            
+            let words = val.split(' ');
+            
+            /*close any already open lists of autocompleted values*/
+            stat_closeAllLists(inp);
+
+            if (!val)
+                inp.placeholder = "Enter search words";
+            
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", inp/*this*/.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            inp/*this*/.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (let dish of result.data) {
+                
+                // Strong every word
+                let txt = dish.dish_name;
+                let is_match = false;
+                for (let word of words)
+                {
+                    if (word.length === 0)
+                        continue;
+                    // (?<!<[^>]*) - this is to prevent from replacing parts of "strong" - it will not
+                    //  search strings inside tags
+                    // This does not work in Safari
+                    //const regex = new RegExp(`((?<!<[^>]*)${word})`, "gi");
+                    //let txt2 = txt.replace(regex, '<strong>$1</strong>');
+                    const regex = new RegExp(`(${word})`, "gi");
+                    let txt2 = txt.replace(regex, '<@@@>$1</@@@>');
+                    //console.log('txt2=', txt2);
+                    if (txt2 !== txt)
+                        is_match = true;
+                    txt = txt2;
+                }
+                //console.log('txt=', txt);
+                const regex = new RegExp(`(@@@)`, "gi");
+                txt = txt.replace(regex, 'strong');
+                
+                /*if (!is_match)
+                {
+                    //console.log(`no match: for arr[${i}]='${arr[i]}'`);
+                    
+                    // Don't skip if we mismatch on empty search string - a user might want to see it all
+                    if (val != '')
+                        continue;
+                }*/
+                
+                let food_data = `<span style="font-size: 10px;"> Cal ${Math.round(dish.cal)} Macro ${Math.round(dish.prot)}/${Math.round(dish.fat)}/${Math.round(dish.carbs)} Fiber ${Math.round(dish.fiber)} Sugar ${Math.round(dish.sugar)} Sodium ${Math.round(dish.sodium)}</span>`;
+                
+                if (dish.user_normal_rank == 0)
+                   // txt =
+                   // `<a href="https://google.com/search?q=${dish.dish_name}" target="_blank"><span style="color: #00AA32">${txt}</span>${food_data}</a> - 100% out of ${dish.unique_users} people who had this dish reached their caloric goals`;
+                    txt =
+                    `<span style="color: #00AA32">${txt}</span>${food_data} - 100% out of ${dish.unique_users} people who had this dish reached their caloric goals`;
+                else
+                    //txt = `<a href="https://google.com/search?q=${dish.dish_name}" target="_blank"><span style="color: ${dish.user_normal_rank<=1.0?'green':'red'}">${txt}</span>${food_data}</a>`;
+                    txt = `<span style="color: ${dish.user_normal_rank<=1.0?'green':'red'}">${txt}</span>${food_data}`;
+//                  txt = `<a href="https://google.com/search?q=${dish.dish_name}" target="_blank"><span style="color: ${dish.rank<1?'#325438':(dish.rank<=100?'green':'red')}">${txt}</span></a>`;
+                //console.log(txt);
+
+
+                /*create a DIV element for each matching element:*/
+                b = document.createElement("DIV");
+                /*make the matching letters bold:*/
+                // b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML = txt;//arr[i].substr(0, ind) + "<strong>" + arr[i].substr(ind, val.length) + "</strong>";
+                //b.innerHTML += arr[i].substr(ind + val.length);
+                /*insert a input field that will hold the current array item's value:*/
+                b.innerHTML += `<input type="hidden" value="${dish.dish_name}">`;
+                //b.innerHTML += "<input type='hidden' value='" + arr_ids[i] + "'>";
+                /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function(e) {
+                        
+
+                        
+                    /*insert the value for the autocomplete text field:*/
+                    //let dish_name = b.getElementsByTagName("input")[0].value;
+                    console.log(`dish_id=${dish.dish_id}`);
+                    
+                    // Get all meals with this dish
+                    let meal_url = `/all_meals_with_dish?dish_id=${dish.dish_id}&limitsort=10`;
+                    console.log(meal_url);
+                    
+                    fetch(meal_url)
+                     .then(response => response.json())
+                     .then(result => {
+                         //console.log(result);
+                         
+                         document.getElementById("all_meals").innerHTML = `<p>Real daily meal plans from users who had <a href="https://google.com/search?q=${dish.dish_name}" target="_blank">${dish.dish_name}</a></p>`;
+                         
+                         for (let day_meal of result.data)
+                         {
+                             
+                             let prot = 0;
+                             for (let dish of day_meal.foods)
+                                prot += dish.prot;
+                             
+                             document.getElementById("all_meals").innerHTML += `<p></p><div><span style="color: ${day_meal.goal_overfulfilment_percent>=0?'green':'red'}">Goal calories: ${day_meal.total_goal_calories}, consumed calories: ${day_meal.total_fact_calories}, Protein: ${Math.trunc(prot)}g</span></div><p></p>`;
+                             for (let dish of day_meal.foods)
+                             {
+                                 
+                                 let txt = dish.dish_name;
+                                 let food_data = `<span style="font-size: 10px;"> Cal ${Math.round(dish.cal)} Macro ${Math.round(dish.prot)}/${Math.round(dish.fat)}/${Math.round(dish.carbs)} Fiber ${Math.round(dish.fiber)} Sugar ${Math.round(dish.sugar)} Sodium ${Math.round(dish.sodium)}</span>`;
+                                 
+                                 if (dish.user_normal_rank == 0 && dish.unique_users >= 10 && day_meal.goal_overfulfilment_percent >= 0)
+                                     txt =
+                                     `<a href="https://google.com/search?q=${dish.dish_name}" target="_blank"><span style="color: #00AA32">${txt}</span>${food_data}</a> - 100% out of ${dish.unique_users} people who had this dish reached their caloric goals`;
+                                 else
+                                     txt = `<a href="https://google.com/search?q=${dish.dish_name}" target="_blank"><span style="color: ${dish.user_normal_rank<=1.0?'green':'red'}">${txt}</span>${food_data}</a>`;
+                                     
+                                 document.getElementById("all_meals").innerHTML += `<div>${txt}</div>`;
+                             } // for (let dish of day_meal.foods)
+                         } // for (let day_meal of result.data)
+                         
+                         // Add substitutions
+                         document.getElementById("all_meals").innerHTML += `<p>SUBSTITUTIONS:</p>`;
+                         for (let dish of result.dish_substitution)
+                         {
+                             let txt = dish.dish_name;
+                             let food_data = `<span style="font-size: 10px;"> Cal ${Math.round(dish.cal)} Macro ${Math.round(dish.prot)}/${Math.round(dish.fat)}/${Math.round(dish.carbs)} Fiber ${Math.round(dish.fiber)} Sugar ${Math.round(dish.sugar)} Sodium ${Math.round(dish.sodium)}</span>`;
+                             
+                             if (dish.user_normal_rank == 0 && dish.unique_users >= 10)
+                                 txt =
+                                 `<a href="https://google.com/search?q=${dish.dish_name}" target="_blank"><span style="color: #00AA32">${txt}</span>${food_data}</a> - 100% out of ${dish.unique_users} people who had this dish reached their caloric goals`;
+                             else
+                                 txt = `<a href="https://google.com/search?q=${dish.dish_name}" target="_blank"><span style="color: ${dish.user_normal_rank<=1.0?'green':'red'}">${txt}</span>${food_data}</a>`;
+                                 
+                             document.getElementById("all_meals").innerHTML += `<div>${txt}</div>`;
+                         }
+                     }
+                     );
+
+                    //let food_or_nutrient_id = this.getElementsByTagName("input")[0].value;
+                    
+  
+                    
+                        inp.value = '';
+                        
+                    /*close the list of autocompleted values,
+                    (or any other open lists of autocompleted values:*/
+                    stat_closeAllLists(inp);
+                        
+
+                        
+                    });
+                a.appendChild(b);
+    
+            } // for (let dish of result)
+            
+        } // function stat_autocomplete2(inp, result)
+
+
+        </script>
+    
+    </head>
+    <body>
+
+
+
+<div>
+
+<center><h2><a class="header-a" href="/">Balanced Foods</a></h2></center>
+    <p></p>
+    
+    <p>
+    1. Are you in a restaurant or in a grocery store right now? Then this is a service for you.<br>
+    2. Enter the name of a food (like pasta, pizza, burger, big mac etc) in the box below.<br>
+    3. You'll see a list of foods matching the name.<br>
+    4. Green foods are food to eat and red foods are foods to avoid.<br>
+    5. Eat more green ones and lose weight.<br>
+    6. You'll be surprised how many foods you actually can eat and lose weight: just type muffin, donut, pie, pizza etc.<br>
+    7. And also as a bonus you'll see daily meal plans from real users who had the same food and reached their caloric goals.<br>
+    8. Enjoy your meals and lose weight with balanced-foods.com :-)
+    
+    </p>
+
+<div class="autocomplete" style="width:100%;">
+      <input id="myInputNewFood" type="text" placeholder="Enter the food name" autocomplete="off">
+    </div>
+
+<script>
+        stat_autocomplete(document.getElementById("myInputNewFood"));
+</script>
+
+<div id="all_meals"></div>
+
+
+<p></p>
+
+<p><center><span style="font-size: 10px;">Foods are sorted in a satiety order that leverages open diaries MyFitnessPal users. Our hypothesis is: the more the food presents on diaries of users who reach their caloric goals the more filling the food is the more likely you'll lose weight having this food.<br>
+    We're using open data from here: https://larc.smu.edu.sg/myfitnesspal-food-diary-dataset</span></center></p>
+
+
+<p><center><a href="/main">Advanced version</a></center></p>
+
+<center>We appreciate your questions and feedback, please drop us a line at <a href="mailto:askme@balanced-foods.com">askme@balanced-foods.com</a></center>
+
+
+<center>
+<p>&COPY; Balanced-Foods 2020</p>
+</center>
+
+</div>
+
+    </body>
+
+    </html>
+

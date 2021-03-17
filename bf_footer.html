@@ -1,0 +1,385 @@
+</script>
+    </td></tr>
+    <tr><td colspan="10" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+</table>
+
+<table> 
+
+   <tr><td colspan="10"><b>Your weight</b></td></tr>
+    <tr><td colspan="10" style="height: 15px;"></td></tr>
+
+    <tr><td id="week_gain" colspan="6">In a week you'll gain kilogram of fat and kilogram of muscle</td>
+    </tr>
+    <tr><td id="month_gain" colspan="6">In a month you'll gain kilogram of fat and kilogram of muscle</td>
+    </tr>
+    <tr><td id="month3_gain" colspan="6">In 3 months you'll gain kilogram of fat and kilogram of muscle</td>
+    </tr>
+    
+    <tr><td colspan="10" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+    <tr><td colspan="10"><b>Your type of diet</b></td></tr>
+    <tr><td colspan="10" style="height: 15px;" id="type_of_diet"></td></tr>
+    
+    <tr><td colspan="10" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+    <tr><td colspan="10"><b>A piece of advice</b></td></tr>
+    <tr><td colspan="10" style="height: 15px;"></td></tr>
+    
+    <tr><td id="carbs_n_sodium" colspan="6"></td>
+    </tr>
+    
+    <tr><td colspan="6" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+
+    <tr><td colspan="10"><b>Your data</b></td></tr>
+    <tr><td colspan="6" style="height: 15px;"></td></tr>
+    
+    <tr>
+        <td>Gender</td>
+        <td id="td_in_mr_data_weight_header">Weight, kg</td>
+        <td style="width: 125px;" id="td_in_mr_data_height_header">Height, cm</td>
+        <td>Age</td>
+        <td>Exercise intensity</td>
+        <td>Body type</td>
+    </tr>
+    
+    <tr>
+    <td><select onchange="mr_data_change('in_mr_data_gender')" id="in_mr_data_gender" style="background-color: #f1f1f1; font-size: 16px; height: 40px; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99;">
+        <option value="" disabled selected hidden>Gender</option>
+        <option value="1">Woman</option>
+        <option value="0">Man</option>
+    </select></td>
+    <td><input id="in_mr_data_weight" type="text" placeholder="Weight"></td>
+    <td id="td_in_mr_data_height">
+        <input id="in_mr_data_height" type="text" placeholder="Height">
+    </td>
+    <td><input id="in_mr_data_age" type="text" placeholder="Age"></td>
+    <td><select onchange="mr_data_change('in_mr_data_exercise')" id="in_mr_data_exercise" style="background-color: #f1f1f1; font-size: 16px; height: 40px; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99;">
+        <option value="" disabled selected hidden>Exercise</option>
+        <option value="0">Sedentary: little or no exercise</option>
+        <option value="1">Exercise 1-3 times/week</option>
+        <option value="2">Exercise 4-5 times/week</option>
+        <option value="3">Daily exercise or intense exercise 3-4 times/week</option>
+        <option value="4">Intense exercise 6-7 times/week</option>
+        <option value="5">Very intense exercise daily, or physical job</option>
+        </select></td>
+    <td><select onchange="mr_data_change('in_mr_data_body_type')" id="in_mr_data_body_type" style="background-color: #f1f1f1; font-size: 16px; height: 40px; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99;">
+        <option value="" disabled selected hidden>Body type</option>
+        <option value="0">Essential</option>
+        <option value="1">Athletes</option>
+        <option value="2">Fitnes</option>
+        <option value="3">Average</option>
+        <option value="4">Overweight</option>
+    </select></td>
+    </tr>
+
+    <tr><td colspan="6" style="height: 15px;"></td></tr>
+
+    <tr><td colspan="10" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+    <tr><td colspan="10"><b>Your metabolic rate</b></td></tr>
+    <tr><td colspan="10" style="height: 15px;"></td></tr>
+    
+    <tr><td id="metabolic_rate" colspan="6"></td>
+    </tr>
+
+    <tr><td colspan="6" style="height: 15px;"></td></tr>
+    </table><table>
+    <tr><td colspan="4" style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+    <tr>
+        <td><b>Charts</b>
+        <select onchange="get_data_from_server(-1)" id="chart_period" style="background-color: #f1f1f1; font-size: 16px; height: 40px; border: 1px solid #d4d4d4; border-bottom: none; border-top: none; z-index: 99;">
+        <option value="7">Week</option>
+        <option value="14">Two weeks</option>
+        <option value="30" selected>Month</option>
+        <option value="60">Two months</option>
+        <option value="90">Three months</option>
+        </select></td>
+    <td colspan="2" style="width: 1000px"></td>
+    </tr>
+    <tr><td colspan="4" style="height: 15px;"></td></tr>
+    
+    <tr>
+        <td colspan="1"><span id="curve_chart1" style="width: 100%"></span></td>
+        <td colspan="1"><span id="curve_chart2" style="width: 100%"></span></td>
+        <td colspan="1"><span id="curve_chart3" style="width: 100%"></span></td>
+    </tr>
+    <tr>
+        <td colspan="1"><span id="curve_chart4"></span></td>
+    </tr>
+
+
+    
+    </table>
+    
+    <p></p>
+    <center>We appreciate your questions and feedback, please drop us a line <a href="mailto:askme@balanced-foods.com">askme@balanced-foods.com</a></center>
+    
+    <center>
+    <p>&COPY; <a class="black-a" href="/">Balanced-Foods</a> 2020</p>
+    </center>
+    
+    </div>
+
+
+<div id="tutorial2" style="position: fixed; left: 100px; top: 30px; bottom:30px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1; display: none;">
+    
+    <p></p>
+    
+    <center>You wonder what does those numbers mean near the food name in the suggestion list? Here is what</center>
+    
+    <p><table>
+        <tr><td>
+            <table><tr><td>
+            <img src="/food_pics?file=tutorial-food-suggestion.png">
+                </td></tr>
+            <tr><td style="font-size: 14px;">4. If the food rank equals exactly 1 then this food is neutral in terms of balance. If it's less than 1 then the food is marked with a green leaf and if it's more than 1 then it's the food that's not marked with a green leaf</td></tr>
+            </table>
+        </td><td>
+        <table style="font-size: 14px;">
+        <tr><td>1. Some nutriens - are protein, fat, carbs, fiber, calories, sodium. Protein, fat, carbs - are the nutrients that are responsible for the total amout of calories in food. Fiber is a very important nutrient e.g. it regulates our appetite. Sodium is responsible for water retention in your body which results in overweight if consumed too much</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>2. Food rank - is a number that shows you how this food alone is balanced with nutrients that your body needs according to their lower and upper limits. You can explore and/or change those lower and upper limits or add new nutrients or remove some nutrients in the <b>Set goal</b> section after pressing the button <b>Show/hide details</b>. The less this number - the better. The food in this list is sorted in the order from lower to hight. So anytime you start entering letters of a food we quickly search the database of 400000 foods and show you the healthiest foods containing the letters you typed. We search foods in the USDA database which contains raw foods, branded foods, cooked foods, recipes and a lot more. And each food comes with the amount of nutrients in it - and that's the information you can trust because you'll see the exact same information on a food label and because USDA constantly run tests against all the foods to make sure that the nutrient information is accurate</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>3. The green leaf near the food means that this food is better to eat than not to eat to reach your goal. The meaning is that if you eat this food then this will improve the nutrition balance of your daily menu. The absence of the green leaf means that it's better not to eat this food, or if you choose to eat it then this will harm the nutrition balance of your daily menu. Don't worry, you still can eat food without green leafs as long as you have enough food with green leafs. Also don't worry green leafs does not mean something untasty or plastic. Look at the picture - Big Mac is green there :-)</td></tr>
+        
+        </table>
+        </td>
+        </tr></table>
+        </p>
+    
+    <p><p>
+    
+    <p></p>
+    
+    <center><input onclick="document.getElementById('tutorial2').style.display='none';" type="submit" value="Click here to continue entering food and other details"></center>
+    
+    </div>
+
+
+
+<div id="tutorial3" style="position: fixed; left: 100px; top: 70px; bottom:150px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1; display: none;">
+    
+    <p></p>
+    
+    <center>Ok, so you submitted food and got a lot of boxes and informtion. Here are some details:</center>
+    
+    <p><table>
+        <tr>
+        
+        <td>
+            <table>
+            <tr><td><img src="/food_pics?file=tutorial-submitted-food.png"></td></tr>
+            <tr>
+                <!--<td><img src="/food_pics?file=tutorial-rebalance1.png"></td>
+                <td><img src="/food_pics?file=tutorial-rebalance2.png"></td>
+                <td><img src="/food_pics?file=tutorial-rebalance3.png"></td>-->
+            </tr>
+            </table>
+        </td>
+        
+        <td>
+        
+        <table style="font-size: 14px;">
+        <tr><td>1. This is the food that you submitted along with amounts. You can change amounts move moving slider or entering numbers in the boxes on the left. Foods by default come with their standard serving sizes, but you can always change it in accordance to your consumption</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>2. You can change oz to grams and vice versa in the upper-left box</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>3. The <b>Apply changes</b> button applies your changes from slider and reload the page. The meaning of this is that you can move sliders back and forth, but if you want to restore the amounts that you entered manually or that came from the defaults then you just reload the page. Otherwise if you want to keep what you got ater moving sliders then just click this button</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>4. The <b>Rebalance meal</b> button - <input style="font-size: 12px;" onclick="document.getElementById('tutorial4').style.display='block';" type="submit" value="Click for details"></td></tr>
+        </table>
+        </td>
+        </tr></table>
+        </p>
+    
+    <p><p>
+    
+    <p></p>
+    
+    <center><input onclick="document.getElementById('tutorial3').style.display='none';" type="submit" value="Click here to continue entering food"></center>
+    
+    </div>
+
+<div id="tutorial4" style="position: fixed; left: 100px; top: 70px; bottom: 150px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1; display: none;">
+    
+    <p></p>
+    
+    <table>
+        <tr>
+        
+        <td>
+            <table>
+            <tr><td><img src="/food_pics?file=tutorial-rebalance1.png"></td>
+                <td><img src="/food_pics?file=tutorial-rebalance2.png"></td>
+                <td><img src="/food_pics?file=tutorial-rebalance3.png"></td>
+            </tr>
+            </table>
+        </td>
+        
+        <td>
+        
+        <table style="font-size: 14px;">
+      
+        <tr><td>1. The <b>Rebalance meal</b> button changes the food amounts in a way to rebalance the food to make some groups of nutrients fit the limits. The changed food amounts obviously changes nutrient amounts in the food :-) You can see those changes in nutrient amounts under the section <b>Set goal</b> below. We will describe that section in details later</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>2. You can press this button twice and see two different results: first time some nutrients with upper limits will be balanced nd the second time some nutrients with the lower limits will be balanced. Look at the picture on the left - it shows the result of rebalancing. You'll see your results near the <b>Set goal</b> section</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>3. If you're lucky then everything will be perfectly balanced. If you're not then this means that this menu CAN'T be balanced just by changing amount of foods - and we need to add, to remove or to substitute foods. Click here to see details about which food to add, which to remove and which to substitute</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>4. Also try this button and see for yourself. If you don't like the result - then just reload the page and food amounts will restore otherwise press <b>Apply changes</b></td></tr>
+        </table>
+        </td>
+        </tr></table>
+    
+    <center><input onclick="document.getElementById('tutorial4').style.display='none';" type="submit" value="Back"></center>
+    
+    </div>
+
+
+
+<div id="tutorial5" style="position: fixed; left: 100px; top: 70px; bottom: 30px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1; display: none;">
+    
+    <p></p>
+    
+    <center>Right section</center>
+    
+    <p><table>
+        <tr>
+        
+        <td>
+            <table>
+            <tr><td><img src="/food_pics?file=tutorial-nutrient-per-food.png"></td></tr>
+            </table>
+        </td>
+        
+        <td>
+        
+        <table style="font-size: 14px;">
+        <tr><td>1. In this section you see the nutrient amount per each food in your menu. In the headers you see these: <b>Pro</b> - protein, <b>Pro</b> - protein, <b>Fat</b> - fat, <b>Crb</b> - carbs, <b>Cal</b> - calories, <b>Sod</b> - sodium. Below are the values of those nutrients. The value left to the slash is the amount of this nutrient in this food per 3&frac12; oz and right to the slash is the amount of this nutrient overall in your amount of this food
+        </td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>2. <b>In 3 mon</b> - under this header you'll see the notice - how many lbs of body weight you'll gain in 3 months if you consume this food in this amount for 3 months on a daily basis. Normally 1 oz of calorie heavy food (like sweets) is responsible for 1 pound of body weight in 3 months. Remember this fact when you bite a delicious piece of a cheesecake :-)</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>3. <b>USDA info</b> - this is the USDA id of this food and the link to the standard nutrition info page</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>4. <b>Subst</b> - under this heade you'll see either green leafs or radio buttons. A green leaf means that this food is better to take than not to take in terms of reaching a perfect balanced menu. A radio button means otherwise. When you click the radio button and later go to the <b>New food</b> box you'll see substitions for this food.</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>5. What does the substitution mean? How we known what is to substitute with with? <input style="font-size:11px;" onclick="document.getElementById('tutorial6').style.display='block';" type="submit" value="Click here for details"></td></tr>
+        </table>
+        </td>
+        </tr></table>
+        </p>
+    
+    <p><p>
+    
+    <p></p>
+    
+    <center><input onclick="document.getElementById('tutorial5').style.display='none';" type="submit" value="Click here to continue entering food"></center>
+    
+    </div>
+
+
+
+
+<div id="tutorial6" style="position: fixed; left: 100px; top: 70px; bottom: 30px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1; display: none;">
+    
+    <p></p>
+    
+    <center>Substitutions</center>
+    
+    <p><table>
+        <tr>
+        
+        <td>
+            <table>
+            <tr><td><img src="/food_pics?file=tutorial-substitutions.png"></td></tr>
+            </table>
+        </td>
+        
+        <td>
+        
+        <table style="font-size: 12px;">
+        <tr><td>1. Once you clicked the radio button on the right and click the <b>New food</b> box on the left you'll see a picture like this
+        </td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>2. It looks similar as a normal list of foods and works similar - you enter lettes of the food and see the results. The difference is that the search is narrowed buy only foods that is similar to what you want to substitute. And another difference is that the food is sorted in the order - the first is the closer to the substituted one</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>3. What do we exactly mean by "similar" or "closer" food? This is this. We take 70 most important nutrients of each food in the huge database of all foods and compare each of those foods with the substituted ones in terms of values of nutrients. The food that matches more in terms of values of nutrients go first in this list. The reason for substitution is to show you foods that might taste the same but be better in terms of balance</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>4. In the picture on the left you see the example of a substition. We substitute Fine Chocolate Powdered Donut. It has rank of 1.55 - more than 1.00 - not very healthy. Below use see examples of similar but better foods. If you choose them instead of that donut then you're very likely to have the same pleasure from the food but receive better nutrient balance and feed your body better. Remember, you and your body eat from the shared plate :-)</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>5. Also you see here additional number that you didn't see in the food list when you searched for a new food: <b>82%</b> is the percent of match by nutrients with the substituted food. The more - the more likely that you'll enjoy the substitution. The list of abbreviations after that is the list of nutrients that matches the substituted food. In this case you see Cal - Calcium and Iro - Iron - these nutrients have very close amount in each substitution, and probably that is what makes the taste of this food. At least you can tell it by the names of substitutions</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>6. You also can narrow the search by typing any letters to find some specific substitution. Once you're happy with the substitution - just click it. If neither of those got you then just click the first red item and stick with it</td></tr>
+        </table>
+        </td>
+        </tr></table>
+        </p>
+    
+    <p><p>
+    
+    <p></p>
+    
+    <center><input onclick="document.getElementById('tutorial6').style.display='none';" type="submit" value="Back"></center>
+    
+    </div>
+
+
+
+<div id="tutorial7" style="position: fixed; left: 100px; top: 70px; bottom: 30px; right: 100px; background-color: white; border-color: gray; border-width: thin; border-style: solid;padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1; display: none;">
+    
+    <p></p>
+    
+    <center>Substitutions</center>
+    
+    <p><table>
+        <tr>
+        
+        <td>
+            <table>
+            <tr><td><img src="/food_pics?file=tutorial-substitutions.png"></td></tr>
+            </table>
+        </td>
+        
+        <td>
+        
+        <table style="font-size: 12px;">
+        <tr><td>1. Once you clicked the radio button on the right and click the <b>New food</b> box on the left you'll see a picture like this
+        </td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>2. It looks similar as a normal list of foods and works similar - you enter lettes of the food and see the results. The difference is that the search is narrowed buy only foods that is similar to what you want to substitute. And another difference is that the food is sorted in the order - the first is the closer to the substituted one</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>3. What do we exactly mean by "similar" or "closer" food? This is this. We take 70 most important nutrients of each food in the huge database of all foods and compare each of those foods with the substituted ones in terms of values of nutrients. The food that matches more in terms of values of nutrients go first in this list. The reason for substitution is to show you foods that might taste the same but be better in terms of balance</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>4. In the picture on the left you see the example of a substition. We substitute Fine Chocolate Powdered Donut. It has rank of 1.55 - more than 1.00 - not very healthy. Below use see examples of similar but better foods. If you choose them instead of that donut then you're very likely to have the same pleasure from the food but receive better nutrient balance and feed your body better. Remember, you and your body eat from the shared plate :-)</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>5. Also you see here additional number that you didn't see in the food list when you searched for a new food: <b>82%</b> is the percent of match by nutrients with the substituted food. The more - the more likely that you'll enjoy the substitution. The list of abbreviations after that is the list of nutrients that matches the substituted food. In this case you see Cal - Calcium and Iro - Iron - these nutrients have very close amount in each substitution, and probably that is what makes the taste of this food. At least you can tell it by the names of substitutions</td></tr>
+        <tr><td style="border-bottom: 1px solid #ddd; height: 15px;"></td></tr>
+        <tr><td>6. You also can narrow the search by typing any letters to find some specific substitution. Once you're happy with the substitution - just click it. If neither of those got you then just click the first red item and stick with it</td></tr>
+        </table>
+        </td>
+        </tr></table>
+        </p>
+    
+    <p><p>
+    
+    <p></p>
+    
+    <center><input onclick="document.getElementById('tutorial6').style.display='none';" type="submit" value="Back"></center>
+    
+    </div>
+
+
+
+    </body>
+    </html>
+

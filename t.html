@@ -1,0 +1,200 @@
+<head>
+<script src="./static?file=bf.js">
+</script>
+
+<link rel="stylesheet" href="./static?file=bf.css"/>
+</head>
+
+    <div>
+    
+    foods::balance<br/>
+<br/>
+<b>You want to eat the following food</b><br/>
+
+<br/>
+<input type="text" id="new_recipe" placeholder="Recipe name" style="width: 150px; height: 20px;"/>
+<button onclick="save_recipe(document.getElementById('new_recipe').value)">Save</button>
+<br/>
+
+<br/>
+[<a href="/nutrition?food=171287" target="blank">171287</a>] <input id="food171287" style="width: 50px; height: 20px;" type="text" value="120"/> grams of <a href="https://www.google.com/search?q=Egg, whole, raw, fresh" target="blank">Egg, whole, raw, fresh</a> {sr_legacy_food}<br/>
+
+
+<script>
+    {
+    let input = document.getElementById("food171287");
+    
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+          alert(input.value);
+         // window.location.href="/t";
+      }
+    });
+    }
+</script>
+
+
+[<a href="/nutrition?food=170335" target="blank">170335</a>] 100 grams of <a href="https://www.google.com/search?q=TACO BELL, BURRITO SUPREME with steak" target="blank">TACO BELL, BURRITO SUPREME with steak</a> {sr_legacy_food}<br/>
+[<a href="/nutrition?food=168746" target="blank">168746</a>] 330 grams of <a href="https://www.google.com/search?q=Alcoholic beverage, beer, regular, all" target="blank">Alcoholic beverage, beer, regular, all</a> {sr_legacy_food}<br/>
+[<a href="/nutrition?food=715540" target="blank">715540</a>] 200 grams of <a href="https://www.google.com/search?q=ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND CARROTS IN A CREAMY ALFREDO SAUCE AND BREAD CRUMB TOPPING" target="blank">ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND CARROTS IN A CREAMY ALFREDO SAUCE AND BREAD CRUMB TOPPING</a> {branded_food}<br/>
+[<a href="/nutrition?food=173452" target="blank">173452</a>] 25 grams of <a href="https://www.google.com/search?q=Cheese, parmesan, dry grated, reduced fat" target="blank">Cheese, parmesan, dry grated, reduced fat</a> {sr_legacy_food}<br/>
+[<a href="/nutrition?food=173201" target="blank">173201</a>] 150 grams of <a href="https://www.google.com/search?q=Alcoholic beverage, wine, table, white, Sauvignon Blanc" target="blank">Alcoholic beverage, wine, table, white, Sauvignon Blanc</a> {sr_legacy_food}<br/>
+[<a href="/nutrition?food=171077" target="blank">171077</a>] 200 grams of <a href="https://www.google.com/search?q=Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw" target="blank">Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw</a> {sr_legacy_food}<br/>
+<br/>
+
+
+
+<div class="autocomplete" style="width:300px;">
+  <input id="myInput3" type="text" placeholder="Food" autocomplete="off">
+</div>
+<script>
+    autocomplete("", 898997, "/t?aa=xx&PARAMS898997againppp898997", document.getElementById("myInput3"), arr);
+</script>
+
+<br/>
+<br/>
+
+<b>You also want limit the following nutrients</b><br/>
+<br/>
+[1008] Energy < 1300<br/>
+<br/>
+
+<div class="autocomplete" style="width:300px;">
+  <input id="myInput4" type="text" placeholder="Add bad nutrient" autocomplete="off">
+</div>
+<script>
+    autocomplete("nutrients", 898997, "/t?aa=xx&PARAMS898997againppp898997", document.getElementById("myInput4"), arr);
+</script>
+<br/><br/>
+
+
+
+<b>And also you want consume at least this amount of the following nutrients</b><br/>
+<br/>
+[1003] Protein > 130<br/>
+<br/>
+
+
+<div class="autocomplete" style="width:300px;">
+  <input id="myInput5" type="text" placeholder="Add good nutrient" autocomplete="off">
+</div>
+<script>
+    autocomplete("nutrients", 898997, "/t?aa=xx&PARAMS898997againppp898997", document.getElementById("myInput5"), arr);
+</script>
+<br/><br/>
+
+<b>Based on data you provided here is what you'll actually consume per bad nutrients</b><br/>
+<br/>
+<div>[1008] Energy < 1300, you'll consume: 1179 <span style="color: green;"><b>GOOD</b></span></div><br/>
+<br/>
+<b>And here is what you'll actually consume per good nutrients</b><br/>
+<br/>
+<div>[1003] Protein > 130, you'll consume: 94 <span style="color: red;"><b>(28 % less)</b></span></div><br/>
+<br/>
+<div style="text-transform: uppercase;"><b>Here is what we sugget you amend</b></div><br/>
+<br/>
+<b>Here is the amount of foods that we suggest you eat to fit your criteria</b><br/>
+<br/>
+[<a href="/nutrition?food=171287" target="blank">171287</a>] 120 grams of <a href="https://www.google.com/search?q=Egg, whole, raw, fresh" target="blank">Egg, whole, raw, fresh</a> {sr_legacy_food}<br/>
+[<a href="/nutrition?food=170335" target="blank">170335</a>] 96 grams of <a href="https://www.google.com/search?q=TACO BELL, BURRITO SUPREME with steak" target="blank">TACO BELL, BURRITO SUPREME with steak</a> {sr_legacy_food}<b> -4 grams</b>
+
+<button onclick="window.location.href='/t?applied=1'">Apply</button>
+
+or substitute with
+
+<div class="autocomplete" style="width:300px;">
+  <input id="myInput1" type="text" name="myCountry" placeholder="Food">
+</div>
+<script>
+    autocomplete("", 12345, "/t?aa=xx&PARAMS112345againppp12345", document.getElementById("myInput1"), arr);
+</script>
+
+
+<br/>
+[<a href="/nutrition?food=168746" target="blank">168746</a>] 330 grams of <a href="https://www.google.com/search?q=Alcoholic beverage, beer, regular, all" target="blank">Alcoholic beverage, beer, regular, all</a> {sr_legacy_food}<br/>
+[<a href="/nutrition?food=715540" target="blank">715540</a>] 200 grams of <a href="https://www.google.com/search?q=ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND CARROTS IN A CREAMY ALFREDO SAUCE AND BREAD CRUMB TOPPING" target="blank">ZUCCHINI LENTIL PENNE PASTA WITH GRILLED WHITE MEAT CHICKEN, BROCCOLI AND CARROTS IN A CREAMY ALFREDO SAUCE AND BREAD CRUMB TOPPING</a> {branded_food}<br/>
+[<a href="/nutrition?food=173452" target="blank">173452</a>] 0 grams of <a href="https://www.google.com/search?q=Cheese, parmesan, dry grated, reduced fat" target="blank">Cheese, parmesan, dry grated, reduced fat</a> {sr_legacy_food}<b> -25 grams</b>
+
+<button onclick="window.location.href='/t?applied=2'">Apply</button>
+
+or substitute with
+
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput2" type="text" name="myCountry" placeholder="Food">
+  </div>
+<script>
+autocomplete("", 678910, "/t?bb=yy&PARAMS2678910x678910threetimeszzz678910", document.getElementById("myInput2"), arr);
+</script>
+
+
+
+<br/>
+[<a href="/nutrition?food=173201" target="blank">173201</a>] 150 grams of <a href="https://www.google.com/search?q=Alcoholic beverage, wine, table, white, Sauvignon Blanc" target="blank">Alcoholic beverage, wine, table, white, Sauvignon Blanc</a> {sr_legacy_food}<br/>
+[<a href="/nutrition?food=171077" target="blank">171077</a>] 365 grams of <a href="https://www.google.com/search?q=Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw" target="blank">Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw</a> {sr_legacy_food}<b> +165 grams</b><br/>
+
+<br/>
+<br/>
+
+<br/>
+<b>This is what you'll actually consume per bad nutrients AFTER AMENDMENTS</b><br/>
+<br/>
+<div>[1008] Energy < 1300, you'll consume: 1300 <span style="color: green;"><b>GOOD</b></span></div><br/>
+<br/>
+<b>And here is what you'll actually consume per good nutrients AFTER AMENDMENTS</b><br/>
+<br/>
+<div>[1003] Protein > 130, you'll consume: 125 <span style="color: red;"><b>(4 % less)</b></span></div><br/>
+<b>There is still a problem after amendments. You wonder why? That's because some of your foods has both good and bad nutrients. These are some details</b><br/>
+<br/>
+1. This food [<a href="/nutrition?food=170335" target="blank">170335</a>] <a href="https://www.google.com/search?q=TACO BELL, BURRITO SUPREME with steak" target="blank">TACO BELL, BURRITO SUPREME with steak</a> {sr_legacy_food} contains these good nutrients<br/>
+<br/>
+[1003] Protein<br/>
+<br/>
+ and at the same time these bad nutrients<br/>
+<br/>
+[1008] Energy<br/>
+<br/>
+The problem is that no matter how you change amount of that food you'll either end up in having TOO MUCH of bad or TOO LITTLE of good<br/>
+<br/>
+What we'd recomend is one of this<br/>
+ a) Substitute that food with another one with a bigger amount of good nutrients<br/>
+ b) Substitute that food with another one with a lesser amount of bad nutrients<br/>
+ c) Add to your meal plan another food with bigger amout of good nutrients<br/>
+<br/>
+Now this is the list of foods that have AS MUCH amount of good nutrients as the food above, but a LESSER amount of any bad nutrients - either of those will be good for the substitution<br/>
+<br/>
+<a href="/ratio?filters=%221003%22,%22>%22,%2210%22,%221008%22,%22<%22,%22183%22" target="blank">Click me</a><br/>
+<br/>
+And this is the list of foods with almost 50% less amount of any of bad nutrients, but with at least AS MUCH amount of good nutrients - either of those will be good for the addition<br/>
+<a href="/ratio?filters=%221003%22,%22>%22,%2210%22,%221008%22,%22<%22,%224%22" target="blank">Click me</a><br/>
+2. This food [<a href="/nutrition?food=173452" target="blank">173452</a>] <a href="https://www.google.com/search?q=Cheese, parmesan, dry grated, reduced fat" target="blank">Cheese, parmesan, dry grated, reduced fat</a> {sr_legacy_food} contains these good nutrients<br/>
+<br/>
+[1003] Protein<br/>
+<br/>
+ and at the same time these bad nutrients<br/>
+<br/>
+[1008] Energy<br/>
+<br/>
+The problem is that no matter how you change amount of that food you'll either end up in having TOO MUCH of bad or TOO LITTLE of good<br/>
+<br/>
+What we'd recomend is one of this<br/>
+ a) Substitute that food with another one with a bigger amount of good nutrients<br/>
+ b) Substitute that food with another one with a lesser amount of bad nutrients<br/>
+ c) Add to your meal plan another food with bigger amout of good nutrients<br/>
+<br/>
+Now this is the list of foods that have AS MUCH amount of good nutrients as the food above, but a LESSER amount of any bad nutrients - either of those will be good for the substitution<br/>
+<br/>
+<a href="/ratio?filters=%221003%22,%22>%22,%2220%22,%221008%22,%22<%22,%22265%22" target="blank">Click me</a><br/>
+<br/>
+And this is the list of foods with almost 50% less amount of any of bad nutrients, but with at least AS MUCH amount of good nutrients - either of those will be good for the addition<br/>
+<a href="/ratio?filters=%221003%22,%22>%22,%2220%22,%221008%22,%22<%22,%226%22" target="blank">Click me</a><br/>
+<br/>
+<br/>
+Hope it helps :-)
+    
+    </div>
+    
+    
+</body>
+

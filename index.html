@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179151347-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-179151347-1');
+    </script>
+
+<link rel="stylesheet" href="./static?file=bf.css">
+    
+    <style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .getstarted {
+      background-color: #0099FF;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .getstarted:hover {
+      background-color: #0077CC;
+    }
+    
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <center>
+    <h2>Balanced Foods</h2>
+    <p>a service about balanced foods - how to feed you and your body from a shared plate and make both happy :-)</p>
+    </center>
+    
+    <button type="button" class="collapsible">We share a plate with our bodies. Click this arrow to learn more &darr;</button>
+    <div class="content">
+    <p>Both ourselves and our bodies need food. Why?</p>
+      <p>Because 1) we enjoy the process - the taste, the setting etc 2) and because our body needs food to function</p>
+      <p>Do we care about our bodies? I mean when we are eating a piece of a cheesecake are we thinking about how this delicious piece of sweet will be broken in nutrients and how our body will benefit from those? Of course not.</p>
+      <p>Ok, then who cares about our bodies if not us? Well, it's nobody but us :-) I mean if we don't care about our bodies then we all the more so don't care about our friend's body then our friends don't care about our bodies for the very same reason</p>
+      <p>So what if we forget about needs of our bodies? Can they just function on their own consuming what's intaken? They can, but not the way we need them to. A lot of body malfunction issues aka health issues and overweight issues have a root cause in bad nutrition. Remeber even when you feed your pet you think about your pet's body - I mean you really take time in the pet shop to find a food with appropriate nutrition components</p>
+      <p>Of course we all know how to care about our bodies. We have a plenty of information out there. Every nutritionist or every nutrition website will tell you that you need 50g of protein a day, a couple cups of vegetables, enough minerals and vitamins, watch calories, limit sodium and cholesterol intake etc</p>
+      <p>And here comes the conflict of interests. We need TASTE and our body needs NUTRIETNS. We can't just eat whatever we like and feed our body with nutrients like we do with our pets because TASTE and NUTRIENTS both come from a single piece of food. What a shame! Although it'd be another world if we could :-)</p>
+      <p>This project is one step forward to that brave new world where you enjoy taste and your body enjoys nutrients from a shared plate</p>
+      
+      <button type="button" class="collapsible">What's the step? &darr;</button>
+      <div class="content">
+          <p>Now that we understand that we and our bodies need different things from food all we need to do is to <i>balance nutrition</i>. OMG you'd say - it sounds like it's another website that will tell me about 2 cups of vegetables and an 8oz steak cooked without oil. No, no and no. Balanced-foods is a different kind of a website</p>
+          <p>This website does one very simple thing - it just balances your nutrition for you. You just eat what you like, what tastes the best for you and the website automatically shows you the right amount of each food in your meal and proper substitutions for foods if the meal otherwise can't be balanced</p>
+          <p></p>
+          
+          <button type="button" class="collapsible">Ok, how is that different from what every nutritionist will do? &darr;</button>
+          <div class="content">
+              <p>Balanced-foods treats nutrition balancing problem as an algorithmic/computational problem. It works like this</p>
+              <p>1. You specify your nutrition needs. That's like this: less than 2000 calories a day, at least 100g of protein, less than 2500Mg of sodium etc
+              <p>2. You submit details about your daily meal - with all foods and amounts</p>
+              <p>3. And balanced-foods immediately shows you the current balance of nutrients (that's easy)</p>
+              <p>4. Then it suggests how you have to change the amount of each food to reach your perfect balance as near as possible (that's not easy at all)</p>
+              <p>5. And finally it scans a huge database of 400000 USDA foods and for each food in your meal finds the best substitution that is on the one hand close to the food in terms of minerals, vitamins and the taste and on the other hand has missing pieces of a puzzle (or doesn't have bad pieces of a puzzle) to balance your nutritions. That's absolutely impossible for a human to do manually</p>
+              
+              <button type="button" class="collapsible">Sounds cool! What else does balanced-foods do? &darr;</button>
+              <div class="content">
+                  <p>On top of that balanced-foods can help you</p>
+                  <p>1. Find a right balance for nutrients for your specific diet e.g. keto diet, low carb diet, low fat diet, high protein diet etc</p>
+                  <p>2. Include a proper amount of vitamins and milerals in your food according to your needs</p>
+                  <p>3. Find out which food in your diet is responsible for which fat gain. For example did you know that one bite of an apple pie each day is responsible for 1 pound of fat gain in 3 months?</p>
+                  <p>4. Predict your weight, muscle and fat gain over time with your current diet and also help change your diet to stay in shape, but without refusal of your favorite dishes</p>
+                  <p>5. And finally it will help your body find foods with exact amount of protein, fat, carbs, calories and micronutrients</p>
+                  
+                  <button type="button" class="getstarted" onclick="window.location.href='/balance?imperial=1'">Get started!</button>
+                  
+                  </div>
+          
+          </div>
+          
+
+          </div>
+      
+    </div>
+    
+    <p></p>
+    <button type="button" class="collapsible">Examples of how Balanced Foods works. Click here &darr;</button>
+    <div class="content">
+        <p>Believe it or not but it does not matter what you like to eat - healthy high protein foods or fast food or sweets. In every case there is a way to balance your meal and feed your body with enough minerals and vitamins, stay on a caloric balance or even deficit, do not gain weight even if you have a sedentary lifestyle and still enjoy the taste of all your favorite dishes. Sounds too good to be true! See for yourself:</p>
+        <p><a target="_blank" href="/balance?foods=%22560137%22,%22115%22,%22170720%22,%22184%22,%22171884%22,%22208%22,%22474245%22,%2245%22,%22581671%22,%22231%22,%22519751%22,%22138%22,%22174833%22,%2269%22,%22170721%22,%2297%22&groups=%22Snack%20before%20breakfast%22,%22560137%22,%22Lunch%22,%22170720%22,%22171884%22,%22Snack%20after%20lunch%22,%22474245%22,%22Dinner%22,%22581671%22,%22519751%22,%22174833%22,%22170721%22&mr=%221%22,%2265%22,%22170%22,%2241%22,%221%22,%222%22&meal_plan=My%20meal%20plan%20with%20fast%20food&imperial=1">Balancing a fast food meal plan</a></p>
+        <p><a target="_blank" href="/balance?foods=%22487430%22,%22113%22,%22554372%22,%2256%22,%22391805%22,%22100%22,%22581671%22,%22100%22,%22395815%22,%2256%22,%22168482%22,%22100%22,%22710692%22,%2256%22,%22168568%22,%2256%22,%22499742%22,%2228%22,%22439075%22,%2256%22,%22489041%22,%2256%22,%22577503%22,%22100%22,%22747447%22,%22113%22,%22168880%22,%2285%22,%22553683%22,%22283%22,%22762418%22,%22566%22&groups=%22Breakfast%22,%22487430%22,%22554372%22,%22Brunch%22,%22391805%22,%22Lunch%22,%22581671%22,%22395815%22,%22168482%22,%22710692%22,%22168568%22,%22499742%22,%22Snack%20after%20lunch%22,%22439075%22,%22489041%22,%22Dinner%22,%22577503%22,%22747447%22,%22168880%22,%22Just%20snack%22,%22553683%22,%22762418%22&mr=%221%22,%2265%22,%22170%22,%2253%22,%221%22,%222%22&meal_plan=High%20protein%20high%20carbs&imperial=1&recipes=">Balancing a high protein, high carb, low fat meal plan</a></p>
+        <p><a target="_blank" href='/balance?foods="439075","200","558839","80","806099","15","394470","57","173110","129","523755","200","169988","150","576957","280","169248","72","487430","100","384432","200","171009","9","786754","200","600826","230","169911","310","5106749","349"&groups="Breakfast","439075","558839","806099","394470","Lunch","173110","523755","169988","576957","169248","Dinner","487430","384432","171009","5106749","Snack%20after%20dinner","786754","600826","169911"&mr="1","65","170","41","1","2"&meal_plan=High%20protein%20low%20carbs&recipes="5106749","Fish%20soup%20with%20cheese","3","168046","300","789694","2000","441084","2000&imperial=1'>Balancing a high protein, low carb meal plan</a></p>
+        <p><a target="_blank" href="/balance?foods=%22358608%22,%2280.4059%22,%22172078%22,%22134.874%22,%22170771%22,%22134.874%22,%22789437%22,%22113.26%22,%22352437%22,%2261.3851%22,%22639748%22,%2261.3851%22,%22174780%22,%2261.3851%22,%22479091%22,%22185.885%22,%22170108%22,%2292.51%22,%22579343%22,%2261.3851%22,%22170106%22,%2261.3851%22,%22168046%22,%2261.3851%22&groups=%22Snack%20before%20breakfast%22,%22789437%22,%22Breakfast%22,%22358608%22,%22172078%22,%22170771%22,%22Snack%20after%20breakfast%22,%22352437%22,%22Brunch%22,%22639748%22,%22Snack%20after%20brunch%22,%22174780%22,%22Lunch%22,%22479091%22,%22170108%22,%22579343%22,%22170106%22,%22168046%22&mr=%221%22,%2265%22,%22170%22,%2241%22,%221%22,%222%22&meal_plan=High%20fat%20high%20carb&imperial=1&recipes=">Balancing a high fat, high carb meal plan</a></p>
+        <p><a target="_blank" href='/balance?foods=%22173300%22,%22156.747%22,%22173298%22,%2265.8891%22,%22807067%22,%2236.0656%22,%22170327%22,%2265.8891%22,%22173297%22,%2263.1148%22,%22352181%22,%22341.236%22,%22449502%22,%22223.329%22,%22514033%22,%2233.9849%22,%22170320%22,%2234.6785%22,%22771706%22,%2269.3569%22,%22540630%22,%22183.796%22,%22404763%22,%22145.65%22,%22504523%22,%22276.734%22,%22173110%22,%2277.6797%22&groups=%22Snack%20before%20breakfast%22,%22807067%22,%22504523%22,%22Late%20night%20snack%22,%22173110%22&mr=%221%22,%2265%22,%22170%22,%2241%22,%221%22,%222%22&meal_plan=Fast%20food%20and%20sweets&imperial=1&recipes='>Balancing a fast food and sweets meal plan</a></p>
+        <p><a target="_blank" href='/balance?foods="5903493","600","5106749","405","354098","10","439075","80","806099","15","576957","70","170108","82","523755","121","174110","350"&groups="Snack%20before%20breakfast","Lunch","5106749","Dinner","5903493","354098","439075","806099","576957","170108","523755","174110"&mr="1","65","170","41","2","2"&meal_plan=High%20protein%20high%20fat%20with%20wine&recipes="5106749","Fish%20soup%20with%20cheese","6","168046","691","789694","2000","441084","360","168568","50","396663","9","170858","100","5903493","Mussesl%20with%20blue%20cheese","5","526607","1500","172178","200","411709","285","789509","850","174110","183"&imperial=1'>Balancing a plan of high protein, high fat and with wine</a></p>
+        <p><a target="_blank" href='/balance?foods="679950","81","769648","22","690188","45","789437","325","344865","45","596317","11","786790","81","372259","138","446806","81","536459","114","439075","91","496766","22"&groups="Breakfast","679950","769648","Snack%20after%20breakfast","690188","789437","Brunch","344865","596317","786790","Lunch","372259","446806","Snack%20after%20lunch","536459","Dinner","439075","496766"&mr="1","65","170","41","0","3"&meal_plan=Sweet%20tooth%20diet&imperial=1&recipes='>Balancing a sweet tooth diet</a></p>
+        <p><a target="_blank" href='/balance?foods="660314","98","789437","392","360914","98","781552","186","781550","171","362700","138","533680","98","698216","98"&groups="Breakfast","660314","789437","Lunch","360914","Snack%20after%20lunch","781552","Second%20snack%20after%20lunch","781550","Dinner","362700","533680","Snack%20after%20dinner","698216"&mr="1","73","170","41","0","3"&meal_plan=Ice%20cream%20diet&imperial=1&recipes='>Balancing an all ice cream diet</a></p>
+        <p><a target="_blank" href='/balance?foods="352278","28","618008","56","352437","28","174780","55","785145","70","353699","28","717232","28","704758","28","551419","28","344650","56.699"&groups="Snack%20before%20breakfast","352278","Breakfast","618008","352437","Snack%20after%20breakfast","174780","Brunch","785145","Snack%20after%20brunch","353699","717232","Lunch","704758","551419","Dinner","344650"&mr="1","65","170","41","0","3"&meal_plan=All%20snack%20diet&imperial=1&recipes='>Balancing an all snack diet</a></p>
+        <p><a target="_blank" href='/balance?foods="785847","94.8112","170332","81.9243","602328","243.932","735254","212.635","170336","137.154","704230","95.7317"&groups="Breakfast","170332","Brunch","602328","Lunch","Dinner","785847","735254","170336","704230"&mr="1","65","170","41","1","3"&meal_plan=Mexican%20diet&imperial=1&recipes='>Balancing an all mexican diet</a></p>
+        <p><a target="_blank" href='/balance?foods="687538","19.3055","454467","47.0048","167929","14.2693","438919","35.2536","517272","10.0725","807067","5.03623","471978","15.1087","493143","113.398","704758","94.8489","438124","67.989"&groups="Snack%20before%20breakfast","687538","454467","Breakfast","704758","Lunch","167929","438919","Dinner","517272","807067","471978","493143","438124"&mr="1","65","170","41","0","2"&meal_plan=All%20bakery%20diet&imperial=1&recipes='>Balancing an all bakery diet</a></p>
+        <p><a target="_blank" href='/balance?foods="560304","30.2669","789437","948.003","358266","233.488","484125","90.8008","653798","233.488","769648","138.363","456295","30.2669","728442","163.225"&groups="Breakfast","560304","789437","Lunch","Snack%20after%20lunch","358266","Dinner","484125","653798","769648","456295","728442"&mr="1","65","170","41","1","2"&meal_plan=All%20bagel%20diet&imperial=1&recipes='>Balancing an all bagel diet</a></p>
+        <p><a target="_blank" href='/balance?foods="786291","130","714288","183","386499","102","582535","102","734346","102","771706","274","692300","120","745462","152","168880","108","396360","96","396340","96"&groups="Breakfast","786291","714288","Lunch","386499","582535","734346","771706","Dinner","692300","745462","168880","396360","396340"&mr="1","65","170","41","0","4"&meal_plan=Japanese%20diet&imperial=1&recipes='>Balancing a japanese diet</a></p>
+        <p><a target="_blank" href='/balance?foods="322892","1594.74","170332","19.6274","168568","36.3108","530924","45.1432","747447","39.255","446102","186.461","382182","81.454","729842","64.7707","532948","186.461","335528","131.504","579295","131.504","786790","229.641"&groups="Snack%20before%20breakfast","322892","170332","168568","530924","747447","446102","382182","729842","532948","335528","579295","786790"&mr="1","65","170","41","1","2"&imperial=1&recipes='>Some pretend perfectly balanced healthy plan</a></p>
+        </div>
+    <p></p>
+    
+    <button type="button" class="collapsible">Alright, is it like a silver bullet? If you're ok with the short answer "well, we wish it were" then don't click here :-) &darr;</button>
+    <div class="content">
+        <p>It's not a silver one but is defenitely a bullet</p>
+        <p>There are other bullets out there that help you track calories, set goals and see nutrient dashboards. They're pretty good in what they do and we don't want to substitute them. What we do want is to help you balance your diet<p/>
+        <p>Let's say you submit your food into one of the calorie tracking apps and then looking at the nutrient dashboard see that your diet is unbalanced - e.g. too many calories, too little protein and fiber and too much sodium. Now your next step would be to change food amounts manually or add some new food manually or try to substitute foods manually. Right?</p>
+        <p>It depends on how is annoying you to do those things manually. If it's a lot then here is what Balanced-Foods is for. Submit your food and let us take care about changing amounts or finding substitutions in your diet to stay in the perfect balance with your body needs</p>
+        <p>In fact (tss, don't tell anyone) there is no such a thing as healty food or unhealthy food. There is such a thing as tasty or untasty food and there is also such a thing as a good combination of nutrients and a bad one. Some food types are considered bad because they're very contraversial in terms of amounts of nutrients and that's why to include them in the diet we really need to spend years of manual balancing. We all have other things to do. And that's why that kind of food is known as "bad" because you'll end up either cutting it from your diet and harming yourself or leaving it alone and harming your body. The latter happens a lot more than the former :-)</p>
+        <p>Here is an example. Take a delicious piece of an apple pie, just from a bakery. It contains calories. Do you need calories? Sure! It contains sodium. Does your body need that? Absolutely. It contains protein - our bodies need that either. It contains sugar and cholesterol. Does your body need sugar or cholesterol? Well in case if your doctor completely bans both nutrients from your diet then you don't need those. Though that's unlikely because normally our body needs both in at least some small amounts. How to fit an apple pie in your diet? Easy - it's just a piece of cake. Take a sheet of paper and a pencil and solve a mathematical problem of finding the exact amout of this pie that will fit into your nutrient limits and if it doesn't then just scan a database of a half a million foods that money can buy to find the substitution for this pie with another one with the slightly different amount of nutrients that go beyond limits. Or maybe let Balanced-Foods do it for you. You got the idea? :-)</p>
+        <p>So, let's be bad girls and bad boys and eat something "bad", but tasty and let Balanced-Food show us specific portion sized, foods  and substitutions to keep our bodies receiving healthy combination of nutrients<p/>
+    </div>
+<p></p>
+
+    <button type="button" class="getstarted" onclick="window.location.href='/balance?imperial=1'">Or just skip that bullship and get started!</button><div class="content"></div>
+    
+
+    <!--<p>Collapsible Set:</p>
+    <button type="button" class="collapsible">Open Section 1</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button type="button" class="collapsible">Open Section 2</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button type="button" class="collapsible">Open Section 3</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>-->
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
+    <p><center><a href="/stat">Light version</a></center></p>
+    <p></p>
+    <center>We appreciate your questions and feedback, please drop us a line <a href="mailto:askme@balanced-foods.com">askme@balanced-foods.com</a></center>
+    
+    <center>
+    <p>&COPY; Balanced-Foods 2020</p>
+    </center>
+    <!--<table>
+        <tr>
+            <td style="font-size: 50px;">Balanced Diet<td><td style="font-size: 20px;">is a service that will help you<td>
+        </tr>
+ 
+
+        <tr><td>Find foods with exact amount of protein, fat, carbs, calories and micronutrients to complete your diet</td></tr>
+        <tr><td></td></tr>
+    </table>-->
+</body>
+
+</html>
+
